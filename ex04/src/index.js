@@ -3,9 +3,9 @@ function sumFibonacci(num) {
   if (num == 1) {
     return 1;
   }
-  let prevNumber = 0;
-  let currNumber = 1;
-  let result = 0;
+  var prevNumber = 0;
+  var currNumber = 1;
+  var result = 0;
   while (currNumber <= num) {
     if (currNumber % 2 !== 0) {
       result += currNumber;
