@@ -1,23 +1,20 @@
 // Only change code below this line
 function sumFibonacci(num) {
-  if (num < 0) {
-    return 0;
-  }
-  if (num === 0) {
+  if (num == 1) {
     return 1;
-  } else {
-    let prevNumber = 0;
-    let currNumber = 1;
-    let result = 0;
-    while (currNumber <= num) {
-      if (currNumber % 2 !== 0 && currNumber === num) {
-        result = currNumber;
-      }
-      currNumber += prevNumber;
-      prevNumber = currNumber - prevNumber;
-    }
-    return result + sumFibonacci(num - 1);
   }
+  let prevNumber = 0;
+  let currNumber = 1;
+  let result = 0;
+  while (currNumber <= num) {
+    if (currNumber % 2 !== 0) {
+      result += currNumber;
+    }
+    currNumber += prevNumber;
+    prevNumber = currNumber - prevNumber;
+  }
+
+  return result;
 }
 // Only change code above this line
 
